@@ -1,0 +1,7 @@
+<!-- my coding <p [ngStyle]="{display: getDisplayState()}">Assignment 3 about directive usage.</p> -->
+<p *ngIf="showParagraph">Assignment 3 about directive usage.</p> <!--Instructors coding-->
+<button class="btn btn-primary" (click)="onButtonClicked()">Display Details</button>
+<p 
+   *ngFor="let logItem of Logs; let i = index" 
+   [ngStyle]="{backgroundColor: i >= 4 ? 'blue' : 'transparent'}" 
+   [ngClass]="{'white-text': i >= 4}">{{logItem}}</p>
