@@ -1,4 +1,8 @@
+<span>This is one way bound input</span>
 <input type="text" class="form-control" (input) = "onUpdateServerName($event)"/>
+<hr>
+<span>This is two way bound input</span>
+<input type="text" class="form-control" [(ngModel)] = "serverName"/>
 <span>{{serverName}}</span>
 
 <hr>
