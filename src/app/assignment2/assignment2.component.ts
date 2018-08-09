@@ -10,10 +10,6 @@ export class Assignment2Component implements OnInit {
   userName: string = "";
   isValueEmpty: boolean = true;
 
-  onButtonClick() {
-      this.userName = "";
-      this.isValueEmpty = true;
-  }
 
   onKeyStroke(event: Event) {
 
