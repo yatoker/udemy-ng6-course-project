@@ -31,7 +31,7 @@ export class DropdownDirective implements OnInit {
     constructor(private elRef: ElementRef) {
     }
 
-    //Binding a propert to class named open and when the bound property changes to false, open class will be removed and vice versa.
+    //Binding a property to class named open and when the bound property changes to false, open class will be removed and vice versa.
     @HostBinding('class.open') isOpen = false;
 
     @HostListener("click") mouseclick(eventData: Event) {
