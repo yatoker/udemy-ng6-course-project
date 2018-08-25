@@ -5,7 +5,7 @@ import { Directive, ElementRef, OnInit, Renderer2, HostListener, HostBinding } f
 })
 export class DropdownDirective implements OnInit {
     ngOnInit(): void {
-        throw new Error("Method not implemented.");
+       //throw new Error("Method not implemented.");
     }
 
     /* ***** My approach *****
