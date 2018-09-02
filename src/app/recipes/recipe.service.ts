@@ -1,7 +1,10 @@
 import { Recipe } from "./recipe-list/recipe.model";
-import { EventEmitter } from "@angular/core";
+import { ShoppingListService } from "../shopping-list/shopping-list.service";
+import { EventEmitter, Injectable } from "@angular/core";
 import { Ingredient } from "src/app/shared/ingredient.model";
 
+
+@Injectable()
 export class RecipeService {
 
     private recipes: Recipe[] = [
@@ -24,8 +27,15 @@ export class RecipeService {
 
       /*@Output()*/ recipeSelected = new EventEmitter<Recipe>();
 
+    constructor(private shoppingListService: ShoppingListService) { }
+
     getRecipes() {
         return this.recipes.slice();
     }
 
+    AddIngredientsToShoppingList(ingredients: Ingredient[]) {
+        // ...ingredients is ec6 feature that converts array into list.
+        this.shoppingListService.ingredients.push(...ingredients);
+        this.shoppingListService.ingredientsChanged.emit(ingredients);
+    }
 }
